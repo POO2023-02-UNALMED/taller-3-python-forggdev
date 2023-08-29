@@ -22,7 +22,7 @@ class Control:
         self.tv.canalUp()
         
     def canalDown(self):
-        self.tv.canalDown
+        self.tv.canalDown()
         
     def volumenUp(self):
         self.tv.volumenUp()

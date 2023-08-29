@@ -6,6 +6,7 @@ class TV:
         self._canal = 1
         self._precio = 500
         self._volumen = 1 
+        self.control = None
         self.__class__.numTV += 1
 
     def getMarca(self):
@@ -31,22 +32,22 @@ class TV:
         return self._volumen
     
     def setVolumen(self,volumen):
-        if self._estado and volumen>=0 and volumen<7:
+        if self._estado and volumen>=0 and volumen<=7:
             self._volumen = volumen
 
     def getControl(self):
         return self.control
     
-    def setMarca(self,control):
+    def setControl(self,control):
         self.control = control
 
-    @staticmethod
+    @classmethod
     def getNumTV(cls):
         return cls.numTV
     
-    @staticmethod
-    def setNumTV(cls,num):
-        cls.numTV=num
+    @classmethod
+    def setNumTV(cls,numTV):
+        cls.numTV=numTV
 
     def turnOn(self):
         self._estado=True
